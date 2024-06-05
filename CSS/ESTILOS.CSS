@@ -1,15 +1,62 @@
+:root{
+    --blue:rgb(0, 255, 132);
+    --white: #ffffff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    }
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 p{
     text-decoration: underline;
     font-size:x-large;
 }
 
-
-.transiciones{
+.transiciones, .animaciones, .transformaciones{
     width: 100px;
     height: 100px;
-    background-color: aquamarine;
+    background-color: var(--blue);
+    transition: width 10s;
+}
+.transiciones{
     transition: width 10s;
 }
 .transiciones:hover{
     width: 300px;
+    
+}
+
+.animaciones:hover{
+    animation: example 10s ease;
+
+}
+
+.animaciones{
+    animation-name: example;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+@keyframes example {
+from{background-color: aquamarine;}
+to{background-color: blueviolet;}
+
+}
+.transformaciones{
+    */ animation-name: rotar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;*/
+    
+}
+
+@keyframes rotar {
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+    
 }
