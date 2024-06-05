@@ -1,0 +1,15 @@
+p{
+    text-decoration: underline;
+    font-size:x-large;
+}
+
+
+.transiciones{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    transition: width 10s;
+}
+.transiciones:hover{
+    width: 300px;
+}
